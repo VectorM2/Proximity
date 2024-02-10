@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyA9s5b2-OQA4wY3AwMFRt6qNOz-RYyth34",
@@ -16,6 +15,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+// Function to create spinner
+function createSpinner(button) {
+  const spinner = document.createElement('span');
+  spinner.classList.add('spinner-border', 'spinner-border-sm', 'ms-1');
+  button.appendChild(spinner);
+  return spinner;
+}
+
+// Function to remove spinner
+function removeSpinner(spinner) {
+  spinner.remove();
+}
 
 var submit = document.getElementById("login");
 
@@ -24,7 +35,7 @@ submit.addEventListener("click", function (event) {
 
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-
+  var button = event.target; // Get the button that was clicked
 
   if (!isValidEmail(email)) {
     alert("Enter a valid email address");
@@ -41,18 +52,24 @@ submit.addEventListener("click", function (event) {
     return; // Exit the function early if any other field is empty
   }
 
+  // Add spinner to the button
+  const spinner = createSpinner(button);
+
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      alert("Successful login..")
       window.location.href = "dashboard.html";
+      // Remove spinner
+      removeSpinner(spinner);
       // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert(errorMessage)
+      alert(errorMessage);
+      // Remove spinner
+      removeSpinner(spinner);
     });
 
 });
@@ -63,32 +80,27 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-
-
-
 //reset password
 
-const reset = document.getElementById("reset")
+const reset = document.getElementById("reset");
 
-reset.addEventListener("click", function (email) {
+reset.addEventListener("click", function () {
   var email = document.getElementById("email").value;
   if (email == "") {
-    alert("Please enter your email.")
-  }
-  else {
+    alert("Please enter your email.");
+  } else {
     sendPasswordResetEmail(auth, email)
       .then(() => {
         // Password reset email sent!
         // ..
-        alert("Password Reset Email Sent to " + email)
-        window.location.reload()
+        alert("Password Reset Email Sent to " + email);
+        window.location.reload();
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage)
+        alert(errorMessage);
         // ..
       });
   }
-})
-
+});
