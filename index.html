@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Proximity</title>
+ <link href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css" rel="stylesheet" integrity="sha256-V6lu+OdYNKTKTsVFBuQsyIlDiRWiOmtC8VQ8Lzdm2i4=" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+ <!--navbar-->
+ <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <button class="navbar-toggler" 
+    type="button" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#navbar" 
+    aria-expanded="false" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img src="/images/logo-blue.png" width="140" />
+    </a>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center">
+       <a href="login.html"> <button type="button" class="btn btn-default px-3 me-2">
+        Login
+      </button></a>
+       <a href="signup.html">
+        <button type="button" class="btn btn-primary me-3 ">
+          Sign up for free
+        </button></a>
+       
+      </div>   
+    </div>
+  </div>
+</nav>
+
+
+<!--hero-->
+<section class="hero my-4">
+ <div class="container">
+   <div class="row align-items-center">
+     <div class="col-md-6">
+       <h3>Welcome to Proximity</h3>
+       <p>Proximity is your personal space on the web where you can connect with others, share your thoughts, and stay updated on what's happening in your network.</p>
+       <p>With Proximity, you can create a profile that reflects who you are, customize your feed to see the content that matters to you, and engage with posts from your friends and followers.</p>
+       <a href="login.html" class="btn btn-primary">Get Started</a>
+     </div>
+     <div class="col-md-6">
+       <img src="https://images.pexels.com/photos/1524105/pexels-photo-1524105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Proximity" class="img-fluid image my-2">
+     </div>
+   </div>
+ </div>
+</section>
+
+<!--features-->
+<section id="features" class="features my-4">
+ <div class="container">
+   <h3>Key Features</h3>
+   <div class="row">
+     <div class="col-md-4">
+       <div class="card my-2">
+         <div class="card-body">
+           <i class="bi bi-person-circle"></i>
+           <h5 class="card-title">Customizable Profiles</h5>
+           <p class="card-text">Personalize your profile with your own avatar, display name, and bio.</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-4">
+       <div class="card my-2">
+         <div class="card-body">
+           <i class="bi bi-journal-text"></i>
+           <h5 class="card-title">Saved Posts</h5>
+           <p class="card-text">Save your favorite posts to easily access them later.</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-4">
+       <div class="card my-2">
+         <div class="card-body">
+           <i class="bi bi-gear"></i>
+           <h5 class="card-title">Edit Profile</h5>
+           <p class="card-text">Update your profile information, including display name, avatar, and bio.</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section id="faq" class="faq my-4">
+ <div class="container">
+   <h5>Frequently Asked Questions</h5>
+   <div class="accordion" id="faqAccordion">
+     <div class="accordion-item">
+       <h3 class="accordion-header" id="faqHeadingOne">
+         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+           How do I update my profile information?
+         </button>
+       </h3>
+       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+         <div class="accordion-body">
+           To update your profile information, navigate to the "Edit Profile" section and make the desired changes. Don't forget to save your changes after updating your information.
+         </div>
+       </div>
+     </div>
+     <div class="accordion-item">
+       <h3 class="accordion-header" id="faqHeadingTwo">
+         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Can I delete my account?
+         </button>
+       </h3>
+       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+         <div class="accordion-body">
+           Yes, you can delete your account at any time. Please note that this action is irreversible and will permanently delete all your account data.
+         </div>
+       </div>
+     </div>
+     <div class="accordion-item">
+       <h3 class="accordion-header" id="faqHeadingThree">
+         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+           Is Proximity free to use?
+         </button>
+       </h3>
+       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+         <div class="accordion-body">
+           Yes, Proximity offers a free plan with basic features available to all users. Additionally, we offer premium subscription plans with enhanced features and benefits for those who require additional functionality. Visit our pricing page for more information.
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="contact-us my-4" id="contact">
+ <div class="container">
+   
+   <div class="row">
+     <div class="col-md-6">
+      <h2>Contact Us</h2>
+   <p>If you have any questions or inquiries, feel free to reach out to us using the information below.
+   You can also subscribe to our newsletter to stay updated with the latest news, offers, and promotions:</p><br>
+       <h4>Contact Information</h4>
+       <ul class="list-unstyled">
+         <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+         <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+         <li><i class="fas fa-envelope"></i> info@example.com</li>
+         <li><i class="fab fa-whatsapp"></i> +1 (123) 456-7890</li>
+       </ul>
+     </div>
+
+     <div class="col-md-6">
+       <h4>Send us a Message</h4>
+       <form>
+         <div class="mb-2">
+           <label for="name" class="form-label">Your Name</label>
+           <input type="text" class="form-control" id="name">
+         </div>
+         <div class="mb-2">
+           <label for="email" class="form-label">Your Email</label>
+           <input type="email" class="form-control" id="email">
+         </div>
+         <div class="mb-2">
+           <label for="message" class="form-label">Message</label>
+           <textarea class="form-control" id="message" rows="3"></textarea>
+         </div>
+         <button type="submit" class="btn btn-primary">Send Message</button>
+       </form>
+     </div>
+   </div>
+ </div>
+</section>
+
+
+ 
+<!--footer-->
+<div class="b-example-divider"></div>
+
+<div class="container">
+ <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+      <img src="images/Promity logo.png" alt="Proximity"  width="80">
+    </a>
+    <span class="mb-3 mb-md-0 text-body-secondary">&copy; <span id="currentYear"></span> Proximity</span>
+  </div>
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fab fa-twitter"></i></a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fab fa-instagram"></i></a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fab fa-facebook"></i></a></li>
+  </ul>
+</footer>
+
+<script>
+  // JavaScript to display the current year in the footer
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+</div>
+
+</body>
+</html>
